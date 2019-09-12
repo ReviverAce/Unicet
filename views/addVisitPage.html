@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Przychodnia Unicet</title>
+	<meta name="description" content="Najszybsza i najlepsza przychodnia jaką odwiedzasz. Zarejestruj się!">
+	<meta name="keywords" content="Science,Medicine">
+	<meta name="author" content="MikoĹ‚aj Kapturowski">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="../css/main.css?rev=1">
+	<link rel="stylesheet" href="../css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="../js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+	<header>
+	
+		<h1 class="logo">Przychodnia Unicet  </h1>
+		
+		<nav id="topnav">
+		
+			<ul class="menu">
+				<li><a href="/registrationPage">Rejestracja</a></li>
+				<li><a href="/loginPage">Logowanie</a></li>
+				<li><a href="/main">Strona główna</a></li>
+				<li><a href="/eventTrackPage">Wnioski</a></li>
+				<li><a href="/addVisitPage">Dodaj wniosek</a></li>
+			</ul>
+			
+		</nav>
+	
+	</header>
+	
+	<main>
+		
+		<article>
+			<div id="login">
+			<form method="post">
+				<input type='hidden' name='_csrf' value=csrfToken/>
+		Rodzaj badania: <br />
+		<input type="radio" name="examOption" value="Krew" checked> Krew<br>
+		<input type="radio" name="examOption" value="Mocz"> Mocz<br>
+		<input type="radio" name="examOption" value="Rentgen"> Rentgen<br>
+		<br /><br>
+		Sposób odbioru wyników: <br /> 
+		<input type="radio" name="receiveOption" value="W przychodni" checked> W przychodni<br>
+		<input type="radio" name="receiveOption" value="Email"> Email<br>
+		<br /><br>
+				
+		Sposób zapłaty: <br /> 
+		<input type="radio" name="paymentOption" value="przelew" checked> Przelew<br>
+		<input type="radio" name="paymentOption" value="przy badaniu"> Przy badaniu<br>
+		<br /><br>
+
+		Data badania: <br /> <input type="date" name="dayOfStudy" /><br /><br>
+
+		Dodatkowe uwagi: <br /> <input type="text" value="" name="comments" /><br /><br>
+		
+		
+		<br />
+		
+		<input type="submit" value="Dodaj wizyte" />
+		</div>
+	</form>
+		
+		</article>
+
+	</main>
+	
+	<footer>
+		
+		<div class="info">
+		Wszelkie prawa zastrzeżone &copy; Mikołaj Wojnarowski i Nazar Lobodynski 2019 Dziękujemy za wizytę!
+		</div>
+	
+	</footer>
+</body>
+</html>

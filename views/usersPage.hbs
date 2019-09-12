@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Przychodnia Unicet</title>
+	<meta name="description" content="Najszybsza i najlepsza przychodnia jaką odwiedzasz. Zarejestruj się!">
+	<meta name="keywords" content="Science,Medicine">
+	<meta name="author" content="MikoŁaj Kapturowski">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="../css/main.css?rev=1">
+	<link rel="stylesheet" href="../css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="../../js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	<style>
+	table, th, td {
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom:50px;
+    border: 1px solid black;
+    border-collapse: collapse;
+	   padding: 4px;
+    background-color: #222222;
+}
+</style>
+</head>
+
+<body>
+	<header>
+	
+		<h1 class="logo">Strona zarządzania wnioskami </h1>
+		
+		<nav id="topnav">
+		
+				<ul class="menu" style="background-color: green">
+					<li><a href="/loginPage">wyloguj</a></li>
+					<li><a href="/usersPage">Lista wniosków</a></li>
+
+					</ul>	
+		</nav>
+	</header>
+	
+	<main>
+		
+		<div id="searcher">
+			
+	</div>
+	<div style="clear:both"></div>
+
+						<table style="width:90%">
+								<tr>
+								<th>Użytkownik</th>
+								<th>Data Badań</th>
+								<th>Rodzaj badań</th>
+								<th>Odbiór wyników</th> 
+								<th>Sposób płatności</th> 
+								<th>Uwagi</th>
+							
+								</tr>
+								{{#each wizyta}}
+										 <tr>
+										<td>{{this.firstName}} {{this.lastName}}</td>
+										<td>{{this.dataBadania}}</td>
+										<td>{{this.rodzajBadania}}</td>
+										<td>{{this.sposobOdbioru}}</td>
+										<td>{{this.sposobZaplaty}}</td>
+										<td>{{this.dodatkoweUwagi}}</td>
+										<td><span ><a href="/accept/:{{this.idWizyta}}" style="color:green;">Przyjmij</a></span></td>
+										<td><span ><a href="/rejected/:{{this.idWizyta}}" style="color:red;">Odrzuć</a></span></td>
+										</tr>
+										{{/each}}
+							</table>
+
+	</main>
+	
+
+</body>
+</html>
